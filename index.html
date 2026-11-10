@@ -1,203 +1,471 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#151c13">
-  <meta name="description" content="A clear, accessible campus issue-reporting interface for organizing facilities, safety, IT, cleanliness, and academic concerns.">
-  <title>CampusCare — Report a campus issue</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#191C24" />
+    <meta
+      name="description"
+      content="A clear, accessible campus issue-reporting interface for organizing facilities, safety, IT, cleanliness, and academic concerns."
+    />
+    <title>CampusCare — Report a campus issue</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Keyboard users can skip directly to the main page content. -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-
-  <aside class="sidebar" aria-label="Main navigation">
-    <a class="brand" href="#overview" aria-label="CampusCare home">
-      <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
-      <span class="brand-copy"><strong>CampusCare</strong><small>Student issue desk</small></span>
-    </a>
-
-    <div class="sidebar-label">WORKSPACE</div>
-    <nav class="primary-nav" aria-label="Workspace">
-      <a class="nav-link is-active" href="#overview" aria-current="page"><span class="nav-icon" aria-hidden="true">01</span><span>Overview</span></a>
-      <a class="nav-link" href="#report-form"><span class="nav-icon" aria-hidden="true">02</span><span>Report an issue</span></a>
-      <a class="nav-link" href="#guide"><span class="nav-icon" aria-hidden="true">03</span><span>Reporting guide</span></a>
-      <a class="nav-link" href="#next-steps"><span class="nav-icon" aria-hidden="true">04</span><span>Next steps</span></a>
-    </nav>
-
-    <div class="sidebar-spacer"></div>
-    <div class="sidebar-help">
-      <span class="help-mark" aria-hidden="true">?</span>
-      <p>Need official assistance?</p>
-      <a href="https://ums.lpu.in/lpuums/StudentDashboard.aspx" target="_blank" rel="noopener noreferrer">if needed higher assistance go to this <span aria-hidden="true">↗</span></a>
-    </div>
-    <p class="sidebar-footnote">A student-facing reporting interface concept.</p>
-  </aside>
-
-  <div class="page-shell">
-    <header class="topbar">
-      <a class="mobile-brand" href="#overview" aria-label="CampusCare home">
-        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
-        <strong>CampusCare</strong>
+    <!-- Desktop sidebar: page navigation and the official LPU assistance link. -->
+    <aside class="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#overview" aria-label="CampusCare home">
+        <span class="brand-mark" aria-hidden="true"
+          ><span></span><span></span><span></span><span></span
+        ></span>
+        <span class="brand-copy"><strong>CampusCare</strong><small>Student issue desk</small></span>
       </a>
-      <details class="mobile-menu">
-        <summary><span class="menu-lines" aria-hidden="true"></span><span>Navigate</span></summary>
-        <nav aria-label="Mobile navigation">
-          <a href="#overview">Overview</a>
-          <a href="#report-form">Report an issue</a>
-          <a href="#guide">Reporting guide</a>
-          <a href="#next-steps">Next steps</a>
-          <a href="https://ums.lpu.in/lpuums/StudentDashboard.aspx" target="_blank" rel="noopener noreferrer">Higher assistance ↗</a>
-        </nav>
-      </details>
-      <div class="topbar-context"><span class="context-dot" aria-hidden="true"></span> Campus support <span class="context-divider">/</span> Issue reporting</div>
-      <a class="topbar-link" href="#report-form">Start a report <span aria-hidden="true">↓</span></a>
-    </header>
 
-    <main id="main-content" class="content-wrap">
-      <section id="overview" class="intro-section" aria-labelledby="page-title">
-        <div class="intro-copy">
-          <div class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> A BETTER CAMPUS, TOGETHER</div>
-          <h1 id="page-title">Make room for<br><em>better</em> campus days.</h1>
-          <p class="intro-lede">Something needs attention? Share the details clearly so the right campus team can understand what’s happening.</p>
-          <a class="button button-primary" href="#report-form">Tell us what’s wrong <span aria-hidden="true">↓</span></a>
-        </div>
-        <aside class="intro-note" aria-label="A useful report includes">
-          <div class="note-topline"><span class="note-icon" aria-hidden="true">✓</span><span>THE SMALL DETAILS HELP</span></div>
-          <h2>A useful report starts with three things.</h2>
-          <ol class="tip-list">
-            <li><span>01</span><div><strong>Where it happened</strong><small>Building, floor, room, or nearby landmark</small></div></li>
-            <li><span>02</span><div><strong>What you noticed</strong><small>Describe the issue and when you saw it</small></div></li>
-            <li><span>03</span><div><strong>What could help</strong><small>Add a photo or a safe way to follow up</small></div></li>
-          </ol>
-          <div class="note-rule"></div>
-          <p class="note-caption">No need to have every answer. Start with what you know.</p>
-        </aside>
-      </section>
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav class="primary-nav" aria-label="Workspace">
+        <a class="nav-link is-active" href="#overview" aria-current="page"
+          ><span class="nav-icon" aria-hidden="true">01</span><span>Overview</span></a
+        >
+        <a class="nav-link" href="#report-form"
+          ><span class="nav-icon" aria-hidden="true">02</span><span>Report an issue</span></a
+        >
+        <a class="nav-link" href="#guide"
+          ><span class="nav-icon" aria-hidden="true">03</span><span>Reporting guide</span></a
+        >
+        <a class="nav-link" href="#next-steps"
+          ><span class="nav-icon" aria-hidden="true">04</span><span>Next steps</span></a
+        >
+        <a class="nav-link" href="#saved-reports"
+          ><span class="nav-icon" aria-hidden="true">05</span><span>Saved reports</span></a
+        >
+      </nav>
 
-      <div class="demo-notice" role="note">
-        <span class="notice-symbol" aria-hidden="true">i</span>
-        <p><strong>Static HTML/CSS preview.</strong> Your browser can check required fields, but this page does not send or save reports. Use the official LPU portal for real assistance.</p>
-        <a href="https://ums.lpu.in/lpuums/StudentDashboard.aspx" target="_blank" rel="noopener noreferrer">Open LPU UMS <span aria-hidden="true">↗</span></a>
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-help">
+        <span class="help-mark" aria-hidden="true">?</span>
+        <p>Need official assistance?</p>
+        <a href="https://ums.lpu.in/lpuums/StudentDashboard.aspx" target="_blank" rel="noopener noreferrer"
+          >if needed higher assistance go to this <span aria-hidden="true">↗</span></a
+        >
       </div>
+      <p class="sidebar-footnote">A student-facing reporting interface concept.</p>
+    </aside>
 
-      <section id="report-form" class="report-section" aria-labelledby="report-title">
-        <div class="section-heading">
-          <div>
-            <div class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> YOUR REPORT</div>
-            <h2 id="report-title">Tell us what needs attention.</h2>
-            <p>Share what you can. Fields marked <span class="required-mark">*</span> are required.</p>
-          </div>
-          <div class="form-time"><span class="clock-mark" aria-hidden="true">◷</span><span>Take your time<br><small>Clear details are helpful</small></span></div>
+    <!-- Main page column contains the top bar, reporting content, and footer. -->
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="mobile-brand" href="#overview" aria-label="CampusCare home">
+          <span class="brand-mark" aria-hidden="true"
+            ><span></span><span></span><span></span><span></span
+          ></span>
+          <strong>CampusCare</strong>
+        </a>
+        <details class="mobile-menu">
+          <summary><span class="menu-lines" aria-hidden="true"></span><span>Navigate</span></summary>
+          <nav aria-label="Mobile navigation">
+            <a href="#overview">Overview</a>
+            <a href="#report-form">Report an issue</a>
+            <a href="#guide">Reporting guide</a>
+            <a href="#next-steps">Next steps</a>
+            <a
+              href="https://ums.lpu.in/lpuums/StudentDashboard.aspx"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Higher assistance ↗</a
+            >
+            <a href="#saved-reports">Saved reports</a>
+          </nav>
+        </details>
+        <div class="topbar-context">
+          <span class="context-dot" aria-hidden="true"></span> Campus support
+          <span class="context-divider">/</span> Issue reporting
         </div>
+        <a class="topbar-link" href="#report-form">Start a report <span aria-hidden="true">↓</span></a>
+      </header>
 
-        <div class="form-card">
-          <div class="form-progress" aria-label="Form sections">
-            <a href="#issue-category" class="progress-step active"><span>1</span> Issue</a>
-            <span class="progress-connector" aria-hidden="true"></span>
-            <a href="#issue-location" class="progress-step"><span>2</span> Location</a>
-            <span class="progress-connector" aria-hidden="true"></span>
-            <a href="#issue-contact" class="progress-step"><span>3</span> Follow-up</a>
-          </div>
-
-          <form action="#next-steps" method="get" class="issue-form" aria-describedby="static-form-note">
-            <fieldset id="issue-category" class="form-group category-group">
-              <legend>What kind of issue is it? <span class="required-mark" aria-hidden="true">*</span></legend>
-              <p class="field-hint">Choose the closest match.</p>
-              <div class="category-grid">
-                <label class="category-option"><input type="radio" name="category" value="facilities" required><span class="category-card"><span class="category-glyph" aria-hidden="true">F</span><span><strong>Facilities</strong><small>Repairs, lighting, furniture</small></span><span class="radio-indicator" aria-hidden="true"></span></span></label>
-                <label class="category-option"><input type="radio" name="category" value="cleanliness"><span class="category-card"><span class="category-glyph glyph-mint" aria-hidden="true">C</span><span><strong>Cleanliness</strong><small>Waste, washrooms, spills</small></span><span class="radio-indicator" aria-hidden="true"></span></span></label>
-                <label class="category-option"><input type="radio" name="category" value="safety"><span class="category-card"><span class="category-glyph glyph-rose" aria-hidden="true">S</span><span><strong>Safety</strong><small>Hazards, access, security</small></span><span class="radio-indicator" aria-hidden="true"></span></span></label>
-                <label class="category-option"><input type="radio" name="category" value="it"><span class="category-card"><span class="category-glyph glyph-lilac" aria-hidden="true">IT</span><span><strong>IT &amp; connectivity</strong><small>Wi-Fi, devices, classroom tech</small></span><span class="radio-indicator" aria-hidden="true"></span></span></label>
-                <label class="category-option"><input type="radio" name="category" value="academics"><span class="category-card"><span class="category-glyph glyph-amber" aria-hidden="true">A</span><span><strong>Academic spaces</strong><small>Classrooms, labs, libraries</small></span><span class="radio-indicator" aria-hidden="true"></span></span></label>
-                <label class="category-option"><input type="radio" name="category" value="other"><span class="category-card"><span class="category-glyph glyph-slate" aria-hidden="true">+</span><span><strong>Something else</strong><small>Another campus concern</small></span><span class="radio-indicator" aria-hidden="true"></span></span></label>
-              </div>
-            </fieldset>
-
-            <fieldset id="issue-location" class="form-group">
-              <legend>Where is it happening? <span class="required-mark" aria-hidden="true">*</span></legend>
-              <p class="field-hint">A specific location helps people find the issue.</p>
-              <div class="field-grid">
-                <label class="field"><span>Campus area <span class="required-mark" aria-hidden="true">*</span></span>
-                  <select required>
-                    <option value="" selected disabled>Select an area</option>
-                    <option>Academic block</option>
-                    <option>Hostel or residence</option>
-                    <option>Library or study space</option>
-                    <option>Dining or common area</option>
-                    <option>Outdoor space or pathway</option>
-                    <option>Other campus location</option>
-                  </select>
-                </label>
-                <label class="field"><span>Building, floor, or room <span class="required-mark" aria-hidden="true">*</span></span><input type="text" placeholder="e.g. Block 12, second floor" autocomplete="off" required></label>
-              </div>
-            </fieldset>
-
-            <fieldset class="form-group">
-              <legend>Describe the issue <span class="required-mark" aria-hidden="true">*</span></legend>
-              <p class="field-hint">A short, specific title and a few details are enough to get started.</p>
-              <label class="field"><span>Report title <span class="required-mark" aria-hidden="true">*</span></span><input type="text" placeholder="e.g. Water leak near the west stairwell" maxlength="90" required></label>
-              <label class="field field-spaced"><span>What did you notice? <span class="required-mark" aria-hidden="true">*</span></span><textarea rows="5" minlength="20" maxlength="1200" placeholder="Describe what happened, when you noticed it, and anything else that could help someone understand the situation. Please avoid sharing sensitive personal information." required></textarea><small class="field-footnote">At least 20 characters. Please don’t include private or sensitive information.</small></label>
-            </fieldset>
-
-            <fieldset class="form-group">
-              <legend>How urgent is it? <span class="required-mark" aria-hidden="true">*</span></legend>
-              <p class="field-hint">For immediate danger, contact campus security or emergency services directly.</p>
-              <div class="urgency-options">
-                <label class="urgency-option"><input type="radio" name="urgency" value="routine" required><span><i class="urgency-dot routine-dot" aria-hidden="true"></i><span><strong>Routine</strong><small>It can be reviewed normally</small></span></span></label>
-                <label class="urgency-option"><input type="radio" name="urgency" value="soon"><span><i class="urgency-dot soon-dot" aria-hidden="true"></i><span><strong>Soon</strong><small>It is affecting people or activities</small></span></span></label>
-                <label class="urgency-option"><input type="radio" name="urgency" value="urgent"><span><i class="urgency-dot urgent-dot" aria-hidden="true"></i><span><strong>Urgent</strong><small>There may be an immediate risk</small></span></span></label>
-              </div>
-            </fieldset>
-
-            <fieldset id="issue-contact" class="form-group last-form-group">
-              <legend>Evidence and follow-up</legend>
-              <p class="field-hint">A contact email is required; a phone number and evidence file are optional.</p>
-              <label class="upload-box" for="evidence-file"><span class="upload-icon" aria-hidden="true">↑</span><span><strong>Add a photo or document <small>(optional)</small></strong><small>Choose an image or PDF from your device. This preview will not upload it.</small></span><input id="evidence-file" type="file" accept="image/*,.pdf,application/pdf"></label>
-              <div class="field-grid contact-grid">
-                <label class="field"><span>Contact email <span class="required-mark" aria-hidden="true">*</span></span><input type="email" placeholder="you@example.edu" autocomplete="email" required></label>
-                <label class="field"><span>Contact phone <small>(optional)</small></span><input type="tel" placeholder="Your phone number" autocomplete="tel"></label>
-              </div>
-            </fieldset>
-
-            <div class="form-submit-row">
-              <p id="static-form-note"><span class="lock-mark" aria-hidden="true">◇</span> This preview does not save or route reports. After browser checks, only category and urgency appear in the URL; location, report text, contact, and file details are not transmitted.</p>
-              <button class="button button-submit" type="submit">Check required fields <span aria-hidden="true">→</span></button>
+      <main id="main-content" class="content-wrap">
+        <!-- Overview introduces the service and gives students a quick reporting guide. -->
+        <section id="overview" class="intro-section" aria-labelledby="page-title">
+          <div class="intro-copy">
+            <div class="eyebrow">
+              <span class="eyebrow-line" aria-hidden="true"></span> A BETTER CAMPUS, TOGETHER
             </div>
-          </form>
-        </div>
-      </section>
+            <h1 id="page-title">Make room for<br /><em>better</em> campus days.</h1>
+            <p class="intro-lede">
+              Something needs attention? Share the details clearly so the right campus team can understand
+              what’s happening.
+            </p>
+            <a class="button button-primary" href="#report-form"
+              >Tell us what’s wrong <span aria-hidden="true">↓</span></a
+            >
+          </div>
+          <aside class="intro-note" aria-label="A useful report includes">
+            <div class="note-topline">
+              <span class="note-icon" aria-hidden="true">✓</span><span>THE SMALL DETAILS HELP</span>
+            </div>
+            <h2>A useful report starts with three things.</h2>
+            <ol class="tip-list">
+              <li>
+                <span>01</span>
+                <div>
+                  <strong>Where it happened</strong><small>Building, floor, room, or nearby landmark</small>
+                </div>
+              </li>
+              <li>
+                <span>02</span>
+                <div>
+                  <strong>What you noticed</strong><small>Describe the issue and when you saw it</small>
+                </div>
+              </li>
+              <li>
+                <span>03</span>
+                <div>
+                  <strong>What could help</strong><small>Add a photo or a safe way to follow up</small>
+                </div>
+              </li>
+            </ol>
+            <div class="note-rule"></div>
+            <p class="note-caption">No need to have every answer. Start with what you know.</p>
+          </aside>
+        </section>
 
-      <section id="guide" class="guide-section" aria-labelledby="guide-title">
-        <div class="guide-heading">
-          <div class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> A LITTLE MORE CONTEXT</div>
-          <h2 id="guide-title">Help the right people<br><em>understand the issue.</em></h2>
-          <p>Reports are easier to act on when they are clear, specific, and safe to share.</p>
+        <!-- Reports are saved in this browser only; the page does not contact a server. -->
+        <div class="demo-notice" role="note">
+          <span class="notice-symbol" aria-hidden="true">i</span>
+          <p>
+            <strong>Browser-only report storage.</strong> Report text stays in this browser only. Optional
+            evidence files are not saved or uploaded. Nothing is sent to LPU or campus staff. Use the official
+            portal for real assistance.
+          </p>
+          <a href="https://ums.lpu.in/lpuums/StudentDashboard.aspx" target="_blank" rel="noopener noreferrer"
+            >Open LPU UMS <span aria-hidden="true">↗</span></a
+          >
         </div>
-        <div class="guide-cards">
-          <article class="guide-card"><span class="guide-number">01</span><h3>Be precise about place</h3><p>Add the building name and, if you know it, the floor, room, entrance, or closest landmark.</p></article>
-          <article class="guide-card"><span class="guide-number">02</span><h3>Stick to what you saw</h3><p>Include when you noticed it and what is affected. Avoid guessing about causes or naming other people.</p></article>
-          <article class="guide-card"><span class="guide-number">03</span><h3>Keep yourself safe</h3><p>Don’t approach hazards to take a photo. For immediate danger, contact campus security or emergency services.</p></article>
-        </div>
-      </section>
 
-      <section id="next-steps" class="next-steps" aria-labelledby="next-title">
-        <div class="next-icon" aria-hidden="true">↗</div>
-        <div class="next-copy">
-          <div class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> NEXT STEPS</div>
-          <h2 id="next-title">Ready to reach official support?</h2>
-          <p>This page is a static prototype. Only category and urgency are carried in the browser URL; location, description, files, and contact details are not sent. Enter the report details again in LPU UMS.</p>
-        </div>
-        <a class="button button-dark" href="https://ums.lpu.in/lpuums/StudentDashboard.aspx" target="_blank" rel="noopener noreferrer">Open LPU UMS <span aria-hidden="true">↗</span></a>
-      </section>
+        <!-- The form uses native validation; JavaScript saves valid responses in this browser only. -->
+        <section id="report-form" class="report-section" aria-labelledby="report-title">
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> YOUR REPORT</div>
+              <h2 id="report-title">Tell us what needs attention.</h2>
+              <p>
+                Share what you can. Fields marked
+                <span class="required-mark">*</span> are required.
+              </p>
+            </div>
+            <div class="form-time">
+              <span class="clock-mark" aria-hidden="true">◷</span
+              ><span>Take your time<br /><small>Clear details are helpful</small></span>
+            </div>
+          </div>
 
-      <footer class="page-footer">
-        <a class="footer-brand" href="#overview"><span class="brand-mark brand-mark-small" aria-hidden="true"><span></span><span></span><span></span><span></span></span> CampusCare</a>
-        <p>Interface concept · Not an official LPU service · No reports are submitted from this page</p>
-        <a href="#main-content">Back to top ↑</a>
-      </footer>
-    </main>
-  </div>
-</body>
+          <div class="form-card">
+            <!-- These links jump between the main groups of report fields. -->
+            <div class="form-progress" aria-label="Form sections">
+              <a href="#issue-category" class="progress-step active"><span>1</span> Issue</a>
+              <span class="progress-connector" aria-hidden="true"></span>
+              <a href="#issue-location" class="progress-step"><span>2</span> Location</a>
+              <span class="progress-connector" aria-hidden="true"></span>
+              <a href="#issue-contact" class="progress-step"><span>3</span> Follow-up</a>
+            </div>
+
+            <form
+              id="campus-report-form"
+              action="#next-steps"
+              method="get"
+              class="issue-form"
+              aria-describedby="static-form-note"
+            >
+              <!-- Required category choice. -->
+              <fieldset id="issue-category" class="form-group category-group">
+                <legend>
+                  What kind of issue is it?
+                  <span class="required-mark" aria-hidden="true">*</span>
+                </legend>
+                <p class="field-hint">Choose the closest match.</p>
+                <div class="category-grid">
+                  <label class="category-option"
+                    ><input type="radio" name="category" value="facilities" required /><span
+                      class="category-card"
+                      ><span class="category-glyph" aria-hidden="true">F</span
+                      ><span><strong>Facilities</strong><small>Repairs, lighting, furniture</small></span
+                      ><span class="radio-indicator" aria-hidden="true"></span></span
+                  ></label>
+                  <label class="category-option"
+                    ><input type="radio" name="category" value="cleanliness" /><span class="category-card"
+                      ><span class="category-glyph glyph-mint" aria-hidden="true">C</span
+                      ><span><strong>Cleanliness</strong><small>Waste, washrooms, spills</small></span
+                      ><span class="radio-indicator" aria-hidden="true"></span></span
+                  ></label>
+                  <label class="category-option"
+                    ><input type="radio" name="category" value="safety" /><span class="category-card"
+                      ><span class="category-glyph glyph-rose" aria-hidden="true">S</span
+                      ><span><strong>Safety</strong><small>Hazards, access, security</small></span
+                      ><span class="radio-indicator" aria-hidden="true"></span></span
+                  ></label>
+                  <label class="category-option"
+                    ><input type="radio" name="category" value="it" /><span class="category-card"
+                      ><span class="category-glyph glyph-lilac" aria-hidden="true">IT</span
+                      ><span
+                        ><strong>IT &amp; connectivity</strong
+                        ><small>Wi-Fi, devices, classroom tech</small></span
+                      ><span class="radio-indicator" aria-hidden="true"></span></span
+                  ></label>
+                  <label class="category-option"
+                    ><input type="radio" name="category" value="academics" /><span class="category-card"
+                      ><span class="category-glyph glyph-amber" aria-hidden="true">A</span
+                      ><span><strong>Academic spaces</strong><small>Classrooms, labs, libraries</small></span
+                      ><span class="radio-indicator" aria-hidden="true"></span></span
+                  ></label>
+                  <label class="category-option"
+                    ><input type="radio" name="category" value="other" /><span class="category-card"
+                      ><span class="category-glyph glyph-slate" aria-hidden="true">+</span
+                      ><span><strong>Something else</strong><small>Another campus concern</small></span
+                      ><span class="radio-indicator" aria-hidden="true"></span></span
+                  ></label>
+                </div>
+              </fieldset>
+
+              <!-- Location details help campus staff find the issue. -->
+              <fieldset id="issue-location" class="form-group">
+                <legend>
+                  Where is it happening?
+                  <span class="required-mark" aria-hidden="true">*</span>
+                </legend>
+                <p class="field-hint">A specific location helps people find the issue.</p>
+                <div class="field-grid">
+                  <label class="field"
+                    ><span>Campus area <span class="required-mark" aria-hidden="true">*</span></span>
+                    <select id="campus-area" required>
+                      <option value="" selected disabled>Select an area</option>
+                      <option>Academic block</option>
+                      <option>Hostel or residence</option>
+                      <option>Library or study space</option>
+                      <option>Dining or common area</option>
+                      <option>Outdoor space or pathway</option>
+                      <option>Other campus location</option>
+                    </select>
+                  </label>
+                  <label class="field"
+                    ><span
+                      >Building, floor, or room <span class="required-mark" aria-hidden="true">*</span></span
+                    ><input
+                      type="text"
+                      id="campus-location"
+                      placeholder="e.g. Block 12, second floor"
+                      autocomplete="off"
+                      required
+                  /></label>
+                </div>
+              </fieldset>
+
+              <!-- Required title and description; the textarea enforces a minimum length. -->
+              <fieldset class="form-group">
+                <legend>
+                  Describe the issue
+                  <span class="required-mark" aria-hidden="true">*</span>
+                </legend>
+                <p class="field-hint">A short, specific title and a few details are enough to get started.</p>
+                <label class="field"
+                  ><span>Report title <span class="required-mark" aria-hidden="true">*</span></span
+                  ><input
+                    type="text"
+                    id="report-title-input"
+                    placeholder="e.g. Water leak near the west stairwell"
+                    maxlength="90"
+                    required
+                /></label>
+                <label class="field field-spaced"
+                  ><span>What did you notice? <span class="required-mark" aria-hidden="true">*</span></span
+                  ><textarea
+                    id="report-description"
+                    rows="5"
+                    minlength="20"
+                    maxlength="1200"
+                    placeholder="Describe what happened, when you noticed it, and anything else that could help someone understand the situation. Please avoid sharing sensitive personal information."
+                    required
+                  ></textarea
+                  ><small class="field-footnote"
+                    >At least 20 characters. Please don’t include private or sensitive information.</small
+                  ></label
+                >
+              </fieldset>
+
+              <!-- Urgency choice; immediate danger should be reported directly to security. -->
+              <fieldset id="issue-urgency" class="form-group">
+                <legend>
+                  How urgent is it?
+                  <span class="required-mark" aria-hidden="true">*</span>
+                </legend>
+                <p class="field-hint">
+                  For immediate danger, contact campus security or emergency services directly.
+                </p>
+                <div class="urgency-options">
+                  <label class="urgency-option"
+                    ><input type="radio" name="urgency" value="routine" required /><span
+                      ><i class="urgency-dot routine-dot" aria-hidden="true"></i
+                      ><span><strong>Routine</strong><small>It can be reviewed normally</small></span></span
+                    ></label
+                  >
+                  <label class="urgency-option"
+                    ><input type="radio" name="urgency" value="soon" /><span
+                      ><i class="urgency-dot soon-dot" aria-hidden="true"></i
+                      ><span
+                        ><strong>Soon</strong><small>It is affecting people or activities</small></span
+                      ></span
+                    ></label
+                  >
+                  <label class="urgency-option"
+                    ><input type="radio" name="urgency" value="urgent" /><span
+                      ><i class="urgency-dot urgent-dot" aria-hidden="true"></i
+                      ><span><strong>Urgent</strong><small>There may be an immediate risk</small></span></span
+                    ></label
+                  >
+                </div>
+              </fieldset>
+
+              <!-- Optional file and phone fields; the contact email is required. -->
+              <fieldset id="issue-contact" class="form-group last-form-group">
+                <legend>Evidence and follow-up</legend>
+                <p class="field-hint">
+                  A contact email is required; a phone number and evidence file are optional.
+                </p>
+                <label class="upload-box" for="evidence-file"
+                  ><span class="upload-icon" aria-hidden="true">↑</span
+                  ><span
+                    ><strong>Add a photo or document <small>(optional)</small></strong
+                    ><small>Selected files are not saved or uploaded in this version.</small></span
+                  ><input id="evidence-file" type="file" accept="image/*,.pdf,application/pdf"
+                /></label>
+                <div class="field-grid contact-grid">
+                  <label class="field"
+                    ><span>Contact email <span class="required-mark" aria-hidden="true">*</span></span
+                    ><input
+                      type="email"
+                      id="contact-email"
+                      placeholder="you@example.edu"
+                      autocomplete="email"
+                      required
+                  /></label>
+                  <label class="field"
+                    ><span>Contact phone <small>(optional)</small></span
+                    ><input type="tel" id="contact-phone" placeholder="Your phone number" autocomplete="tel"
+                  /></label>
+                </div>
+              </fieldset>
+
+              <!-- Privacy text and live feedback explain the local-only save behavior. -->
+              <div class="form-submit-row">
+                <p id="static-form-note">
+                  <span class="lock-mark" aria-hidden="true">◇</span> Report text is saved in this browser
+                  only. Optional evidence files are not saved. Nothing is sent to campus staff or LPU.
+                </p>
+                <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+                <button class="button button-submit" type="submit">
+                  Save report on this device <span aria-hidden="true">→</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <!-- Local report history is readable and deletable from this browser. -->
+        <section id="saved-reports" class="saved-reports-section" aria-labelledby="saved-reports-title">
+          <div class="section-heading saved-reports-heading">
+            <div>
+              <div class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> ON THIS DEVICE</div>
+              <h2 id="saved-reports-title">Saved reports</h2>
+              <p>Review or delete reports stored in this browser. They are not sent to campus staff.</p>
+            </div>
+            <button id="clear-saved-reports" class="button button-dark" type="button">
+              Delete all saved reports
+            </button>
+          </div>
+          <p id="storage-status" class="storage-status" role="status" aria-live="polite">
+            Loading reports saved in this browser…
+          </p>
+          <div id="saved-reports-list" class="saved-reports-list">
+            <p class="saved-reports-empty">No reports are saved in this browser yet.</p>
+          </div>
+          <p class="storage-privacy-note">
+            Report text stays on this device in this browser. Evidence files are not saved. Anyone with access
+            to this browser profile may be able to read the saved text. Clearing browser data may remove it.
+          </p>
+        </section>
+
+        <!-- Practical advice for making reports clear, useful, and safe. -->
+        <section id="guide" class="guide-section" aria-labelledby="guide-title">
+          <div class="guide-heading">
+            <div class="eyebrow">
+              <span class="eyebrow-line" aria-hidden="true"></span> A LITTLE MORE CONTEXT
+            </div>
+            <h2 id="guide-title">Help the right people<br /><em>understand the issue.</em></h2>
+            <p>Reports are easier to act on when they are clear, specific, and safe to share.</p>
+          </div>
+          <div class="guide-cards">
+            <article class="guide-card">
+              <span class="guide-number">01</span>
+              <h3>Be precise about place</h3>
+              <p>
+                Add the building name and, if you know it, the floor, room, entrance, or closest landmark.
+              </p>
+            </article>
+            <article class="guide-card">
+              <span class="guide-number">02</span>
+              <h3>Stick to what you saw</h3>
+              <p>
+                Include when you noticed it and what is affected. Avoid guessing about causes or naming other
+                people.
+              </p>
+            </article>
+            <article class="guide-card">
+              <span class="guide-number">03</span>
+              <h3>Keep yourself safe</h3>
+              <p>
+                Don’t approach hazards to take a photo. For immediate danger, contact campus security or
+                emergency services.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Official support handoff: this prototype directs real reports to LPU UMS. -->
+        <section id="next-steps" class="next-steps" aria-labelledby="next-title">
+          <div class="next-icon" aria-hidden="true">↗</div>
+          <div class="next-copy">
+            <div class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> NEXT STEPS</div>
+            <h2 id="next-title">Ready to reach official support?</h2>
+            <p>
+              Reports saved here stay in this browser and are not sent to campus staff. For official
+              assistance, enter the report details in LPU UMS.
+            </p>
+          </div>
+          <a
+            class="button button-dark"
+            href="https://ums.lpu.in/lpuums/StudentDashboard.aspx"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Open LPU UMS <span aria-hidden="true">↗</span></a
+          >
+        </section>
+
+        <!-- Site note clarifies that CampusCare is a concept, not an official service. -->
+        <footer class="page-footer">
+          <a class="footer-brand" href="#overview"
+            ><span class="brand-mark brand-mark-small" aria-hidden="true"
+              ><span></span><span></span><span></span><span></span
+            ></span>
+            CampusCare</a
+          >
+          <p>Interface concept · Not an official LPU service · No reports are submitted from this page</p>
+          <a href="#main-content">Back to top ↑</a>
+        </footer>
+      </main>
+    </div>
+    <!-- Browser-side storage and saved-report controls; no server is contacted. -->
+    <script src="app.js" defer></script>
+  </body>
 </html>
