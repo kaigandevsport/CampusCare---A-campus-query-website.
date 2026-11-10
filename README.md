@@ -1,51 +1,64 @@
-# Campus_Problem_Reporter
+# CampusCare — Campus Issue Reporting
 
-A simple, responsive website for reporting problems in a college campus, built using only **HTML5** and **CSS3**. This is a college mini project.
+CampusCare is a static college-campus issue-reporting interface. Students can describe a campus problem, choose its category and urgency, and save a copy of the report in their current browser.
 
-## About the Project
-
-Colleges have many small problems, such as broken benches, water leakage, lights not working and slow Wi-Fi, but students often do not know where to report them. This project provides a clear form where a student can describe a problem and its location.
+> **Important:** This is a front-end project, not an official reporting channel. Reports are stored only in the browser's `localStorage`; they are not sent to campus staff or LPU. Do not enter sensitive or confidential information. Use the official [LPU UMS student dashboard](https://ums.lpu.in/lpuums/StudentDashboard.aspx) when you need higher assistance.
 
 ## Features
 
-- Report form with name, roll number, email, category, location, description, priority and optional photo
-- Built-in form validation using HTML5 (required fields, email format)
-- Problem categories: classroom, electricity, water, Wi-Fi, hostel and canteen, road and safety
-- Reported problems table with colored status labels (Pending, In Progress, Solved)
-- Project details section
-- Responsive layout that works on mobile and desktop
+- Campus issue form for facilities, cleanliness, safety, IT/connectivity, academic spaces, and other concerns.
+- Fields for campus area, location, title, description, urgency, and contact details.
+- Browser-native form validation for required fields and input formats.
+- Saves, lists, and deletes reports in the current browser using `localStorage`.
+- Saves report text only. Optional evidence files are not uploaded or stored.
+- Dark dashboard appearance with a royal-purple accent palette.
+- Sidebar navigation, reporting guidance, next-step information, and a link to LPU UMS.
 
-## Technologies Used
+## Project files
 
-- HTML5
-- CSS3
-
-## Project Structure
-
-```
-campus_problem_reporter/
-├── index.html
-└── style.css
+```text
+.
+├── index.html   # Page content, navigation, reporting form, and accessible labels
+├── styles.css   # Layout, colors, and visual styles
+├── app.js       # Form handling and browser-local report storage
+└── README.md    # Project and setup documentation
 ```
 
-## How to Run
+## Run locally
 
-1. Download or clone this repository.
-2. Keep `index.html` and `style.css` in the same folder.
-3. Open `index.html` in any web browser.
+No package installation or build step is needed. From the project folder, start a simple local web server:
 
-## Note
+```bash
+python3 -m http.server 8000
+```
 
-This is a front-end project. The form does not store data, and the reported problems table contains sample entries. A backend (such as PHP with MySQL or Node.js) can be added in future to save reports.
+Then open <http://localhost:8000> in a browser. You can also open `index.html` directly, but using a local web server is more consistent across browsers.
 
-## Future Improvements
+## How report storage works
 
-- Save reports in a database
-- Admin login to update problem status
-- Search and filter reported problems
-- Email notifications
+1. The browser checks the required form fields using built-in HTML validation.
+2. When a valid form is submitted, `app.js` collects the answers into a JavaScript object.
+3. The script reads existing reports from `localStorage`, adds the new report, and saves the list as JSON under the key `campuscareReports`.
+4. Saved reports are shown on the page and can be deleted individually or cleared together.
+5. Reopening the site in the same browser profile loads the saved reports again.
 
-## Author
+The data stays in that browser profile on that device. It does not sync across devices or reach a campus office. Anyone with access to the same browser profile may be able to view it, and clearing browser data may remove it. The optional evidence-file input is not persisted.
 
-Sahil Rawat, Roll No. 19,
-Lovely Professional University
+## Publish with GitHub Pages
+
+1. Push these project files to a GitHub repository.
+2. In the repository, open **Settings → Pages**.
+3. Under **Build and deployment**, choose **Deploy from a branch**.
+4. Select the branch containing the site (commonly `main`) and the project root (`/`), then save.
+5. Open the published URL shown in the Pages settings.
+
+Because this is a static site, GitHub Pages can host the interface without a server. Browser-local report storage still belongs to each visitor's browser; it does not create a shared reporting inbox.
+
+## Technology
+
+- HTML
+- CSS
+- Vanilla JavaScript
+- Browser `localStorage`
+
+There are no external packages or build tools required.
